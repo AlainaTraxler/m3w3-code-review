@@ -1,9 +1,17 @@
 {{#if inEdit}}
-<button class="mini ui button green right floated" {{action ""}}>{{fa-icon "pencil-square-o"}}</button>
-<button class="mini ui button red right floated" {{action "toggleEdit"}}>{{fa-icon "ban"}}</button>
-<br>
+  <div class="ui form">
+    <button class="mini ui button green right floated" {{action "updateQuestion"}}>{{fa-icon "pencil-square-o"}}</button>
+    <button class="mini ui button red right floated" {{action "toggleEdit"}}>{{fa-icon "ban"}}</button>
+    <br><br>
+    <label>Confession</label>
+    {{input value=question.question id="question"}}
+
+    <label>Let It All Out</label>
+    {{textarea value=question.further id="further"}}
+  </div>
+  <br>
 {{else}}
-<button class="mini ui button yellow right floated" {{action "toggleEdit"}}>{{fa-icon "pencil-square-o"}}</button>
-<button class="mini ui button red right floated" {{action ""}}>{{fa-icon "trash-o"}}</button>
-<br>
+  <button class="mini ui button yellow right floated" {{action "toggleEdit"}}>{{fa-icon "pencil-square-o"}}</button>
+  <button class="mini ui button red right floated" {{action ""}}>{{fa-icon "trash-o"}}</button>
+  <br>
 {{/if}}

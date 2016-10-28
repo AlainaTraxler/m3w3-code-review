@@ -9,6 +9,16 @@ export default Ember.Component.extend({
       }else {
         this.set("inEdit", true);
       }
+    },
+    updateQuestion(question){
+      var params = {
+        question: this.get('question.question'),
+        further: this.get('question.further')
+      };
+
+      this.set("inEdit", false);
+
+      this.sendAction("updateQuestion", question, params);
     }
   }
 });
