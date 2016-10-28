@@ -1,0 +1,9 @@
+{{#if inEdit}}
+<button class="mini ui button green right floated" {{action ""}}>{{fa-icon "pencil-square-o"}}</button>
+<button class="mini ui button red right floated" {{action "toggleEdit"}}>{{fa-icon "ban"}}</button>
+<br>
+{{else}}
+<button class="mini ui button yellow right floated" {{action "toggleEdit"}}>{{fa-icon "pencil-square-o"}}</button>
+<button class="mini ui button red right floated" {{action ""}}>{{fa-icon "trash-o"}}</button>
+<br>
+{{/if}}
