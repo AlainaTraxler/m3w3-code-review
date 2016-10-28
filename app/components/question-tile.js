@@ -13,6 +13,9 @@ export default Ember.Component.extend({
     },
     testFunc(){
       console.log(this.get('question'));
+    },
+    deleteAnswer(answer){
+      this.sendAction("deleteAnswer", answer);
     }
   }
 });

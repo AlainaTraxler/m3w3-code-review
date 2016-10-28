@@ -11,7 +11,7 @@
   <div class="ui comments">
     <h3 class="ui dividing header">Answers</h3>
     {{#each question.answers as |answer|}}
-      {{answer-tile question=question createAnswer="createAnswer"}}
+      {{answer-tile question=question createAnswer="createAnswer" deleteAnswer="deleteAnswer"}}
     {{/each}}
   </div>
 </div>
