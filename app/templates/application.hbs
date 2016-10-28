@@ -20,16 +20,9 @@
   </div>
 </body>
 
-<!-- <div class="ui pushable segment component context">
-    {{#ui-sidebar class="inverted menu left inline vertical" context=".component.context" id="sub-sidebar"}}
-      <span class="item">{{#link-to 'contact'}}Contact{{/link-to}}</span>
-      <span class="item">{{#link-to 'about'}}About{{/link-to}}</span>
-      <span class="item">{{#link-to 'index'}}Home{{/link-to}}</span>
-    {{/ui-sidebar}}
-    <div class="pusher">
-      <div class="ui basic segment" style="height: 100%;">
-        <div class="circular ui button orange" {{action 'toggleSidebar' 'sub-sidebar'}}>{{fa-icon "bars"}}</div>
-        {{outlet}}
-      </div>
-    </div>
-  </div> -->
+
+{{#ui-sticky class="segment"}}
+  <div style="text-align:right;">
+    <h5>{{fa-icon "copyright"}} Eloavox Designs</h5>
+  </div>
+{{/ui-sticky}}
