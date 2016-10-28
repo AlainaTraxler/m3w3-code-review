@@ -19,11 +19,14 @@ export default Ember.Component.extend({
       if(this.get('user') === undefined || this.get('question') === undefined || this.get('further') === undefined){
         $('#error').transition('scale');
       }else {
+        var date = new Date();
+        date = date.toString();
+
         var params = {
           user: this.get('user'),
           question: this.get('question'),
           further: this.get('further'),
-          date: "1/2/3456"
+          date: date
         };
 
         this.set("inCreate", false);

@@ -9,7 +9,7 @@ export default Ember.Component.extend({
       } else {
         this.set("inCreate", true);
       }
-    
+
       this.set("#user", "");
       this.set("#user", "");
     },
@@ -19,10 +19,13 @@ export default Ember.Component.extend({
           $('#error').transition('scale');
         }
       }else {
+        var date = new Date();
+        date = date.toString();
+
         var params = {
           user: $("#user").val(),
           answer: $("#answer").val(),
-          date: "1/2/3456",
+          date: date,
           question: this.get('question')
         };
         this.set("inCreate", false);

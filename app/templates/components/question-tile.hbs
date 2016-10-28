@@ -3,13 +3,15 @@
   <span style="color:orange;">{{question.user}}</span>
 </div>
 <div class="content">
+  <span style="color:gray;font-size:.85em">@  {{question.date}}</span>
+  <br><br>
   {{question.further}}
   {{question-edit question=question updateQuestion="updateQuestion" deleteQuestion="deleteQuestion"}}
-  <br><hr>
+  <br>
   <div class="ui comments" style="max-width: 100%">
     <h3 class="ui dividing header">Peanut Gallery</h3>
     {{answer-new question=question createAnswer="createAnswer"}}
-    <hr>
+
     {{#each question.answers as |answer|}}
       {{answer-tile answer=answer createAnswer="createAnswer" deleteAnswer="deleteAnswer" updateAnswer="updateAnswer"}}
     {{/each}}
