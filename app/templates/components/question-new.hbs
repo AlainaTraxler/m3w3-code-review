@@ -1,1 +1,20 @@
+<div style="text-align:right">
+{{#if inCreate}}
+  <div class="ui form">
+    <button class="mini ui button green right floated">Confess</button>
+    <button class="mini ui button red right floated" {{action "toggleCreate"}}>{{fa-icon "ban"}}</button>
+    <br><br>
+    <label>Name:</label>
+    {{input value=user}}
 
+    <label>Confession:</label>
+    {{input value=question}}
+
+    <label>Let It All Out:</label>
+    {{textarea value=further}}
+  </div>
+{{else}}
+<button class="mini ui button blue right floated" {{action "toggleCreate"}}>Confess</button>
+<br>
+{{/if}}
+</div>
