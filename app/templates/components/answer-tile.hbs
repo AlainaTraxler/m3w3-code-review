@@ -3,17 +3,16 @@
     <img src="https://api.adorable.io/avatars/285/{{answer.user}}.png">
   </a>
   <div class="content">
-    <a class="author">{{answer.user}}</a>
+    <span class="author">{{answer.user}}</span>
     <div class="metadata">
-      <span class="date">Temporal Holder</span>
+      <span class="date"> @ Temporal Holder</span>
     </div>
     <div class="text">
       {{answer.answer}}
+      <br>
     </div>
     <div class="actions">
       {{answer-edit answer=answer deleteAnswer="deleteAnswer"}}
     </div>
   </div>
 </div>
-
-<br>

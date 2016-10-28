@@ -7,13 +7,10 @@
   {{question-edit question=question updateQuestion="updateQuestion" deleteQuestion="deleteQuestion"}}
   <br><hr>
   {{answer-new question=question createAnswer="createAnswer"}}
-  <br>
   <div class="ui comments">
-    <h3 class="ui dividing header">Answers</h3>
+    <h3 class="ui dividing header">Peanut Gallery</h3>
     {{#each question.answers as |answer|}}
-      {{answer-tile question=question createAnswer="createAnswer" deleteAnswer="deleteAnswer"}}
+      {{answer-tile answer=answer createAnswer="createAnswer" deleteAnswer="deleteAnswer"}}
     {{/each}}
   </div>
 </div>
-
-<button class="orange" {{action "testFunc"}}></button>
