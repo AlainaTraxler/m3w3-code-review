@@ -4,7 +4,7 @@
 <div style="text-align:right;">
   <br>
   {{#ui-accordion class="ui styled fluid"}}
-    {{#each model as |question|}}
+    {{#each model.questions as |question|}}
       {{question-tile question=question updateQuestion="updateQuestion" deleteQuestion="deleteQuestion"}}
     {{/each}}
   {{/ui-accordion}}
