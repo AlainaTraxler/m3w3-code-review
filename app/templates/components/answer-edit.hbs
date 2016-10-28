@@ -1,13 +1,15 @@
 {{#if inEdit}}
   <div class="ui form">
+    <div class="ui message error" id="error">
+      <i class="close icon right floated" {{action "toggleError"}}></i>
+      <span>Please fill out all fields&nbsp;</span>
+    </div>
     <button class="mini ui button green right floated" {{action "updateAnswer" answer}}>{{fa-icon "pencil-square-o"}}</button>
     <button class="mini ui button red right floated" {{action "toggleEdit"}}>{{fa-icon "ban"}}</button>
     <br><br>
-    <label>Confession</label>
-    {{input value=answer.answer id="answer"}}
+    <label>Advice</label>
+    <textarea value={{answer.answer}} id="answer"></textarea>
 
-    <label>Let It All Out</label>
-    {{textarea value=answer.further id="further"}}
   </div>
   <br>
 {{else}}

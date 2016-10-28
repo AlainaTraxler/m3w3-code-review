@@ -11,14 +11,21 @@ export default Ember.Component.extend({
       }
     },
     createQuestion(){
-      var params = {
-        user: this.get('user'),
-        question: this.get('question'),
-        further: this.get('further'),
-        date: "1/2/3456"
-      };
-      this.set("inCreate", false);
-      this.sendAction("createQuestion", params);
+      if(this.get('user') === undefined || this.get('question') === undefined || this.get('further') === undefined){
+        $('#error').transition('scale');
+      }else {
+        var params = {
+          user: this.get('user'),
+          question: this.get('question'),
+          further: this.get('further'),
+          date: "1/2/3456"
+        };
+        this.set("inCreate", false);
+        this.sendAction("createQuestion", params);
+      }
+    },
+    toggleError(){
+      $('#error').transition('scale');
     }
   }
 });

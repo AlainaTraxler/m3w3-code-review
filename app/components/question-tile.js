@@ -11,11 +11,11 @@ export default Ember.Component.extend({
     createAnswer(params){
       this.sendAction("createAnswer", params);
     },
-    testFunc(){
-      console.log(this.get('question'));
-    },
     deleteAnswer(answer){
       this.sendAction("deleteAnswer", answer);
+    },
+    updateAnswer(answer, params){
+      this.sendAction("updateAnswer",answer,  params);
     }
   }
 });

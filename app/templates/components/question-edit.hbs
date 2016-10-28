@@ -1,5 +1,9 @@
 {{#if inEdit}}
   <div class="ui form">
+    <div class="ui message error" id="error">
+      <i class="close icon right floated" {{action "toggleError"}}></i>
+      <span>Please fill out all fields&nbsp;</span>
+    </div>
     <button class="mini ui button green right floated" {{action "updateQuestion" question}}>{{fa-icon "pencil-square-o"}}</button>
     <button class="mini ui button red right floated" {{action "toggleEdit"}}>{{fa-icon "ban"}}</button>
     <br><br>

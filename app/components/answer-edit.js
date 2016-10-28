@@ -11,19 +11,23 @@ export default Ember.Component.extend({
       }
     },
     updateAnswer(answer){
-      console.log(answer);
-      var params = {
-        answer: this.get('answer.answer'),
-        further: this.get('answer.further')
-      };
+      if($("#answer").val() === ""){
+        $('#error').transition('scale');
+      }else {
+        var params = {
+          answer: $("#answer").val()
+        };
 
-      this.set("inEdit", false);
+        this.set("inEdit", false);
 
-      this.sendAction("updateAnswer", answer, params);
+        this.sendAction("updateAnswer", answer, params);
+      }
     },
     deleteAnswer(answer){
-      console.log(answer);
       this.sendAction("deleteAnswer", answer);
+    },
+    toggleError(){
+      $('#error').transition('scale');
     }
   }
 });

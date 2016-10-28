@@ -13,8 +13,6 @@ export default Ember.Route.extend({
       newQuestion.save();
     },
     updateQuestion(question, params){
-      console.log(">>");
-      console.log(params);
       Object.keys(params).forEach(function(key) {
         console.log(key);
         console.log(params[key]);
@@ -39,6 +37,16 @@ export default Ember.Route.extend({
     },
     deleteAnswer(answer){
       answer.destroyRecord();
+    },
+    updateAnswer(answer, params){
+      Object.keys(params).forEach(function(key) {
+        console.log(key);
+        console.log(params[key]);
+        if(params[key]!==undefined) {
+          answer.set(key,params[key]);
+        }
+      });
+      answer.save();
     }
   }
 });

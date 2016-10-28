@@ -1,6 +1,10 @@
 <div style="text-align:right">
   {{#if inCreate}}
     <div class="ui form">
+      <div class="ui message error" id="error">
+        <i class="close icon right floated" {{action "toggleError"}}></i>
+        <span>Please fill out all fields&nbsp;</span>
+      </div>
       <button class="mini ui button green right floated" {{action "createQuestion"}}>Confess</button>
       <button class="mini ui button red right floated" {{action "toggleCreate"}}>{{fa-icon "ban"}}</button>
       <br><br>

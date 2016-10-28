@@ -6,11 +6,12 @@
   {{question.further}}
   {{question-edit question=question updateQuestion="updateQuestion" deleteQuestion="deleteQuestion"}}
   <br><hr>
-  {{answer-new question=question createAnswer="createAnswer"}}
   <div class="ui comments">
     <h3 class="ui dividing header">Peanut Gallery</h3>
+    {{answer-new question=question createAnswer="createAnswer"}}
+    <hr>
     {{#each question.answers as |answer|}}
-      {{answer-tile answer=answer createAnswer="createAnswer" deleteAnswer="deleteAnswer"}}
+      {{answer-tile answer=answer createAnswer="createAnswer" deleteAnswer="deleteAnswer" updateAnswer="updateAnswer"}}
     {{/each}}
   </div>
 </div>
