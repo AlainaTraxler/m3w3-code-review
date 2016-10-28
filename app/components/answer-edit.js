@@ -12,7 +12,11 @@ export default Ember.Component.extend({
     },
     updateAnswer(answer){
       if($("#answer").val() === ""){
-        $('#error').transition('scale');
+        if(!($("#error").hasClass("visible"))){
+          if(!($("#error").hasClass("visible"))){
+            $('#error').transition('scale');
+          }
+        }
       }else {
         var params = {
           answer: $("#answer").val()

@@ -11,16 +11,23 @@ export default Ember.Component.extend({
       }
     },
     createAnswer(question){
-      console.log(this.get('question'))
-      var params = {
-        user: this.get('user'),
-        answer: this.get('answer'),
-        date: "1/2/3456",
-        question: this.get('question')
-      };
-      console.log(params.question.user)
-      this.set("inCreate", false);
-      this.sendAction("createAnswer", params);
+      if($("#answer").val() === "" || $("#user").val() === ""){
+        if(!($("#error").hasClass("visible"))){
+          $('#error').transition('scale');
+        }
+      }else {
+        var params = {
+          user: $("#user").val(),
+          answer: $("#answer").val(),
+          date: "1/2/3456",
+          question: this.get('question')
+        };
+        this.set("inCreate", false);
+        this.sendAction("createAnswer", params);
+      }
+    },
+    toggleError(){
+      $('#error').transition('scale');
     }
   }
 });

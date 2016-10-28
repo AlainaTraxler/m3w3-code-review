@@ -8,10 +8,10 @@
     <button class="mini ui button red right floated" {{action "toggleEdit"}}>{{fa-icon "ban"}}</button>
     <br><br>
     <label>Confession</label>
-    {{input value=question.question id="question"}}
+    <input value={{question.question}} id="question">
 
     <label>Let It All Out</label>
-    {{textarea value=question.further id="further"}}
+    <textarea value={{question.further}} id="further"></textarea>
   </div>
   <br>
 {{else}}

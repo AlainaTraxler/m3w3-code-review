@@ -9,15 +9,17 @@ export default Ember.Component.extend({
       }else {
         this.set("inEdit", true);
       }
-      
+
     },
     updateQuestion(question){
-      if(this.get('question.question') === "" || this.get('question.further') === ""){
-        $('#error').transition('scale');
+      if($("#question").val() === "" || $("#further").val() === ""){
+        if(!($("#error").hasClass("visible"))){
+          $('#error').transition('scale');
+        }
       }else {
       var params = {
-          question: this.get('question.question'),
-          further: this.get('question.further')
+          question: $("#question").val(),
+          further: $("#further").val()
         };
 
         this.set("inEdit", false);
