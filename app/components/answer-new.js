@@ -9,6 +9,9 @@ export default Ember.Component.extend({
       } else {
         this.set("inCreate", true);
       }
+    
+      this.set("#user", "");
+      this.set("#user", "");
     },
     createAnswer(question){
       if($("#answer").val() === "" || $("#user").val() === ""){

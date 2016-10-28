@@ -9,6 +9,11 @@ export default Ember.Component.extend({
       } else {
         this.set("inCreate", true);
       }
+
+      this.set('user')
+      this.set('question')
+      this.set('further')
+
     },
     createQuestion(){
       if(this.get('user') === undefined || this.get('question') === undefined || this.get('further') === undefined){
@@ -20,6 +25,7 @@ export default Ember.Component.extend({
           further: this.get('further'),
           date: "1/2/3456"
         };
+
         this.set("inCreate", false);
         this.sendAction("createQuestion", params);
       }
