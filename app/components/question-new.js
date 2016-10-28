@@ -17,6 +17,7 @@ export default Ember.Component.extend({
         further: this.get('further'),
         date: "1/2/3456"
       };
+      this.set("inCreate", false);
       this.sendAction("createQuestion", params);
     }
   }
