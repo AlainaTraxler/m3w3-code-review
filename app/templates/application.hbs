@@ -1,1 +1,37 @@
+<head>
+  <link rel="stylesheet" type="text/css"
+         href="https://fonts.googleapis.com/css?family=Raleway|Monsterrat">
+</head>
 
+<body style="font-family:Raleway">
+
+  <div class="ui pushable component context">
+    {{#ui-sidebar class="inverted menu top inline horizontal" context=".component.context" id="sub-sidebar"}}
+    <a class="item">Item 1</a>
+    <a class="item">Item 2</a>
+    <a class="item">Item 3</a>
+    {{/ui-sidebar}}
+    <div class="pusher">
+      <div class="ui basic" style="min-height: 300px;">
+        <div class="ui basic" {{action 'toggleSidebar' 'sub-sidebar'}}>
+          <i class="caret down icon"></i>
+        </div>
+        {{outlet}}
+      </div>
+    </div>
+  </div>
+</body>
+
+<!-- <div class="ui pushable segment component context">
+    {{#ui-sidebar class="inverted menu left inline vertical" context=".component.context" id="sub-sidebar"}}
+      <span class="item">{{#link-to 'contact'}}Contact{{/link-to}}</span>
+      <span class="item">{{#link-to 'about'}}About{{/link-to}}</span>
+      <span class="item">{{#link-to 'index'}}Home{{/link-to}}</span>
+    {{/ui-sidebar}}
+    <div class="pusher">
+      <div class="ui basic segment" style="height: 100%;">
+        <div class="circular ui button orange" {{action 'toggleSidebar' 'sub-sidebar'}}>{{fa-icon "bars"}}</div>
+        {{outlet}}
+      </div>
+    </div>
+  </div> -->
