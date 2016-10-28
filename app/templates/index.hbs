@@ -1,8 +1,11 @@
-<!-- <img src="assets/images/banner_cropped.png" alt="banner" style="width:100vw"/> -->
+<img src="assets/images/banner_cropped.png" alt="banner" style="width:100vw"/>
+{{question-new}}
+
 <div style="text-align:right;">
-  ---
-  {{#each model as |question|}}
-    Test
-  {{/each}}
+  <br>
+  {{#ui-accordion class="ui styled fluid"}}
+    {{#each model as |question|}}
+      {{question-tile question=question}}
+    {{/each}}
+  {{/ui-accordion}}
 </div>
-<button {{action "testFunc"}}></button>
