@@ -5,7 +5,7 @@
   <br>
   {{#ui-accordion class="ui styled fluid"}}
     {{#each model as |question|}}
-      {{question-tile question=question updateQuestion="updateQuestion"}}
+      {{question-tile question=question updateQuestion="updateQuestion" deleteQuestion="deleteQuestion"}}
     {{/each}}
   {{/ui-accordion}}
 </div>

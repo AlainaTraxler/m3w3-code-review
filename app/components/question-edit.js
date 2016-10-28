@@ -11,6 +11,7 @@ export default Ember.Component.extend({
       }
     },
     updateQuestion(question){
+      console.log(question);
       var params = {
         question: this.get('question.question'),
         further: this.get('question.further')
@@ -19,6 +20,10 @@ export default Ember.Component.extend({
       this.set("inEdit", false);
 
       this.sendAction("updateQuestion", question, params);
+    },
+    deleteQuestion(question){
+      console.log(question);
+      this.sendAction("deleteQuestion", question);
     }
   }
 });

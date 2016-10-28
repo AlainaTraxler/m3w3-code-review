@@ -20,6 +20,9 @@ export default Ember.Route.extend({
         }
       });
       question.save();
+    },
+    deleteQuestion(question){
+      question.destroyRecord();
     }
   }
 });
