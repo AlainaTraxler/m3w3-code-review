@@ -1,7 +1,16 @@
-# Tifun-a
+# Tifu&a
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+A Q&A forum where users can leave comments on posts.
+
+## Objectives
+
+* _Application template contains header with link(s)._
+* _Data is stored in and retrieved from Ember Data models and Firebase._
+* _Components are used to create display and behavior for your templates._
+* _One-to-many relationship exists between Question and Answers._
+* _Application works as expected._
+* _Project is in a presentable, portfolio-quality state._
+* _Project demonstrates understanding of week's concepts. If prompted, you are able to discuss your code with an instructor using correct terminology._
 
 ## Prerequisites
 
@@ -23,11 +32,7 @@ You will need the following things properly installed on your computer.
 ## Running / Development
 
 * `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
+* View at [http://localhost:4200](http://localhost:4200).
 
 ### Running Tests
 
@@ -41,7 +46,10 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deploying
 
-Specify what it takes to deploy your app.
+Above instructions wil allow running locally.
+
+### Known Bugs
+No known bugs.
 
 ## Further Reading / Useful Links
 
