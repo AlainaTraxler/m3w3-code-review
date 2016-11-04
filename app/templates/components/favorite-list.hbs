@@ -1,0 +1,6 @@
+<div class="ui comments" style="max-width: 100%;text-align:right;">
+  <h3 class="ui dividing header">Favorited Answers</h3>
+  {{#each favoriteAnswers.faves as |answer|}}
+    {{favorite-tile answer=answer}}
+  {{/each}}
+</div>

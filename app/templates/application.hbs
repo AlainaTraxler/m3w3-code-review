@@ -7,12 +7,13 @@
 
   <div class="ui pushable component context">
     {{#ui-sidebar class="inverted menu top inline horizontal" context=".component.context" id="sub-sidebar"}}
-    <a class="item" href="/">Home</a>
+    <span class="item">{{#link-to "index"}}Home{{/link-to}}</span>
+    <span class="item">{{#link-to "favorites"}}Favorites{{/link-to}}</span>
     {{/ui-sidebar}}
     <div class="pusher">
       <div class="ui basic" style="min-height: 300px;">
-        <div class="ui basic" {{action 'toggleSidebar' 'sub-sidebar'}}>
-          <i class="caret down icon"></i>
+        <div class="ui basic" style="padding-left:10px;padding-top:10px;"{{action 'toggleSidebar' 'sub-sidebar'}}>
+          {{fa-icon "bars"}}
         </div>
         {{outlet}}
       </div>

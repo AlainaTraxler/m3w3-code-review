@@ -11,7 +11,6 @@
     <textarea value={{answer.answer}} id="answer"></textarea>
 
   </div>
-  <br>
 {{else}}
   <!-- Further development: implement authentication system and display either the edit/delete buttons, or the upvote buttons -->
   <button class="mini ui button yellow right floated" {{action "toggleEdit"}}>{{fa-icon "pencil-square-o"}}</button>
@@ -28,5 +27,4 @@
         maxRating=1
         id=(id-return answer)}}
     </div>
-  <br>
 {{/if}}

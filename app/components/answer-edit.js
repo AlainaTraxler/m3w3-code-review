@@ -3,13 +3,13 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   inEdit: false,
   favoriteAnswers: Ember.inject.service(),
-  favorited: Ember.computed(function(answer) {
-    // Anticipatory system. Sets initialRating on the heart icon so that it is filled when favorited.
-    if(this.get('favoriteAnswers').faves.contains(answer)){
+  favorited: Ember.computed(function() {
+    if(this.get('favoriteAnswers').faves.indexOf(this.get("answer")) !== -1){
       return 1;
     }else{
       return 0;
     }
+
   }),
   actions:{
     toggleEdit(){
@@ -65,8 +65,9 @@ export default Ember.Component.extend({
 
     },
     addToFaves(answer){
-      console.log($('#' + answer.get("id")).rating('get rating'));
       this.get('favoriteAnswers').adjust(answer);
+      console.log(this.get('favoriteAnswers').faves);
+
     }
   }
 });
