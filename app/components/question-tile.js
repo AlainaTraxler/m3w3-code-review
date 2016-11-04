@@ -17,7 +17,7 @@ export default Ember.Component.extend({
       this.sendAction("deleteAnswer", answer);
     },
     updateAnswer(answer, params){
-      this.sendAction("updateAnswer",answer,  params);
+      this.sendAction("updateAnswer", answer,  params);
     }
   }
 });

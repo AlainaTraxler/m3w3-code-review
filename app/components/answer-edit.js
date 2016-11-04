@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   inEdit: false,
+  favoriteAnswers: Ember.inject.service(),
   actions:{
     toggleEdit(){
       if(this.inEdit){
@@ -55,5 +56,9 @@ export default Ember.Component.extend({
       this.sendAction("updateAnswer", answer, params);
 
     },
+    addToFaves(answer){
+      console.log($('#' + this.get(answer.id)).rating('get rating'));
+      // this.get('favoriteAnswers').add(answer);
+    }
   }
 });
