@@ -3,6 +3,14 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   inEdit: false,
   favoriteAnswers: Ember.inject.service(),
+  favorited: Ember.computed(function(answer) {
+    // Anticipatory system. Sets initialRating on the heart icon so that it is filled when favorited.
+    if(this.get('favoriteAnswers').faves.contains(answer)){
+      return 1;
+    }else{
+      return 0;
+    }
+  }),
   actions:{
     toggleEdit(){
       if(this.inEdit){
