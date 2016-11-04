@@ -21,7 +21,12 @@ export default Ember.Route.extend({
       question.save();
     },
     deleteQuestion(question){
-      question.destroyRecord();
+      var answer_deletions = question.get('answers').map(function(answer) {
+        return answer.destroyRecord();
+      });
+      Ember.RSVP.all(answer_deletions).then(function() {
+        return question.destroyRecord();
+      });
     },
     createAnswer(params){
       var newAnswer = this.store.createRecord('answer', params);
