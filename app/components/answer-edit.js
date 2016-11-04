@@ -58,7 +58,7 @@ export default Ember.Component.extend({
     },
     addToFaves(answer){
       console.log($('#' + answer.get("id")).rating('get rating'));
-      // this.get('favoriteAnswers').add(answer);
+      this.get('favoriteAnswers').adjust(answer);
     }
   }
 });
