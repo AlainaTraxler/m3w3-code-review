@@ -3,7 +3,7 @@
   <span style="color:orange;">{{question.user}}</span>
 </div>
 <div class="content">
-  <span style="color:gray;font-size:.85em">@  {{question.date}}</span>
+  <span style="color:gray;font-size:.85em">@  {{time-format question.date}}</span>
   <br><br>
   {{question.further}}
   {{question-edit question=question updateQuestion="updateQuestion" deleteQuestion="deleteQuestion"}}
