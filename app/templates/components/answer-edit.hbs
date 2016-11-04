@@ -17,7 +17,7 @@
   <button class="mini ui button red right floated" {{action "deleteAnswer" answer}}>{{fa-icon "trash-o"}}</button>
   <button class="mini ui circular button orange right floated" {{action "vote" "up" answer}}>{{fa-icon "thumbs-o-up"}}</button>
   <button class="mini ui circular button orange right floated" {{action "vote" "down" answer}}>{{fa-icon "thumbs-o-down"}}</button>
-    <div {{action "addToFaves" answer}}>
+    <div {{action "toggleFaves" answer}}>
       {{ui-rating
         class="heart"
         rating=heartRating

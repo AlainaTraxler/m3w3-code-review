@@ -64,10 +64,9 @@ export default Ember.Component.extend({
       this.sendAction("updateAnswer", answer, params);
 
     },
-    addToFaves(answer){
+    toggleFaves(answer){
       this.get('favoriteAnswers').adjust(answer);
       console.log(this.get('favoriteAnswers').faves);
-
     }
   }
 });

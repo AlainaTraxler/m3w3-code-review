@@ -13,8 +13,17 @@
       {{answer.answer}}
       <br>
     </div>
-    <div class="actions">
-      {{answer-edit answer=answer deleteAnswer="deleteAnswer" updateAnswer="updateAnswer"}}
-    </div>
+    <!-- <div class="actions">
+      <div {{action "toggleFaves" answer}}>
+        {{ui-rating
+          class="heart"
+          rating=heartRating
+          onRate=(action (mut heartRating))
+          clearable=true
+          initialRating=1
+          maxRating=1
+          id=(id-return answer)}}
+      </div> -->
+    <!-- </div> -->
   </div>
 </div>

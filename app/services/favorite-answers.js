@@ -12,5 +12,6 @@ export default Ember.Service.extend({
       catcher.pushObject(answer);
     }
     this.set("faves", catcher);
+    console.log(this.get("faves"))
   }
 });

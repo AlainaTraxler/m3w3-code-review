@@ -1,5 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  favoriteAnswers: Ember.inject.service()
+  favoriteAnswers: Ember.inject.service(),
+  actions:{
+    refresh(){
+      this.sendAction("refresh");
+    }
+  }
 });

@@ -9,9 +9,8 @@
   {{question-edit question=question updateQuestion="updateQuestion" deleteQuestion="deleteQuestion"}}
   <br>
   <div class="ui comments" style="max-width: 100%">
-    <h3 class="ui dividing header">Peanut Gallery</h3>
+    <h3 class="ui horizontal divider">Peanut Gallery</h3>
     {{answer-new question=question createAnswer="createAnswer"}}
-
     {{#each sortedAnswers as |answer|}}
       {{answer-tile answer=answer createAnswer="createAnswer" deleteAnswer="deleteAnswer" updateAnswer="updateAnswer"}}
     {{/each}}
