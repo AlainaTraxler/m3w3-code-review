@@ -1,11 +1,13 @@
+<br>
 <div class="comment">
   <a class="avatar">
     <img src="https://api.adorable.io/avatars/285/{{answer.user}}.png">
   </a>
   <div class="content">
     <span class="author">{{answer.user}}</span>
+    <br>
     <div class="metadata">
-      <span class="date"> @ {{answer.date}}</span>
+      <span class="date">{{time-format answer.date}}</span>
     </div>
     <div class="text">
       {{answer.answer}}

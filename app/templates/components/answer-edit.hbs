@@ -13,7 +13,10 @@
   </div>
   <br>
 {{else}}
+  <!-- Further development: implement authentication system and display either the edit/delete buttons, or the upvote buttons -->
   <button class="mini ui button yellow right floated" {{action "toggleEdit"}}>{{fa-icon "pencil-square-o"}}</button>
   <button class="mini ui button red right floated" {{action "deleteAnswer" answer}}>{{fa-icon "trash-o"}}</button>
+  <button class="mini ui circular button orange right floated" {{action "vote" "up" answer}}>{{fa-icon "thumbs-o-up"}}</button>
+  <button class="mini ui circular button orange right floated" {{action "vote" "down" answer}}>{{fa-icon "thumbs-o-down"}}</button>
   <br>
 {{/if}}

@@ -26,6 +26,7 @@ export default Ember.Component.extend({
           user: $("#user").val(),
           answer: $("#answer").val(),
           date: date,
+          votes: 0,
           question: this.get('question')
         };
         this.set("inCreate", false);

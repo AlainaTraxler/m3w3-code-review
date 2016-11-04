@@ -32,6 +32,28 @@ export default Ember.Component.extend({
     },
     toggleError(){
       $('#error').transition('scale');
-    }
+    },
+    vote(direction, answer){
+      var votes;
+
+      //Protection for older answer models without votes.
+      if(this.get("answer.votes")){
+        votes = this.get("answer.votes");
+      } else {
+        votes = 0;
+      }
+
+      if(direction === "up"){
+        votes++;
+      }else{
+        votes--;
+      }
+
+      var params = {
+        votes: votes
+      };
+      this.sendAction("updateAnswer", answer, params);
+
+    },
   }
 });

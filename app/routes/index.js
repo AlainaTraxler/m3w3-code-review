@@ -7,6 +7,7 @@ export default Ember.Route.extend({
       answers: this.store.findAll('answer')
     });
   },
+  sortedAnswers: Ember.computed.sort('answers.votes', 'sortBy'),
   actions:{
     createQuestion(params){
       var newQuestion = this.store.createRecord('question', params);
@@ -14,8 +15,6 @@ export default Ember.Route.extend({
     },
     updateQuestion(question, params){
       Object.keys(params).forEach(function(key) {
-        console.log(key);
-        console.log(params[key]);
         if(params[key]!==undefined) {
           question.set(key,params[key]);
         }
@@ -40,8 +39,6 @@ export default Ember.Route.extend({
     },
     updateAnswer(answer, params){
       Object.keys(params).forEach(function(key) {
-        console.log(key);
-        console.log(params[key]);
         if(params[key]!==undefined) {
           answer.set(key,params[key]);
         }
