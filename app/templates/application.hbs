@@ -4,7 +4,6 @@
 </head>
 
 <body style="font-family:Raleway" style="height:100vh">
-
   <div class="ui pushable component context">
     {{#ui-sidebar class="inverted menu top inline horizontal" context=".component.context" id="sub-sidebar"}}
     <span class="item">{{#link-to "index"}}Home{{/link-to}}</span>
@@ -15,6 +14,7 @@
         <div class="ui basic" style="padding-left:10px;padding-top:10px;"{{action 'toggleSidebar' 'sub-sidebar'}}>
           {{fa-icon "bars"}}
         </div>
+        <img src="assets/images/banner_cropped.png" alt="banner" style="width:100vw"/>
         {{outlet}}
       </div>
     </div>
