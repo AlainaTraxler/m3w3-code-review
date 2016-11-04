@@ -7,7 +7,6 @@ export default Ember.Route.extend({
       answers: this.store.findAll('answer')
     });
   },
-  sortedAnswers: Ember.computed.sort('answers.votes', 'sortBy'),
   actions:{
     createQuestion(params){
       var newQuestion = this.store.createRecord('question', params);

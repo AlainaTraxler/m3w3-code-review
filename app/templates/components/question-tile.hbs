@@ -12,7 +12,7 @@
     <h3 class="ui dividing header">Peanut Gallery</h3>
     {{answer-new question=question createAnswer="createAnswer"}}
 
-    {{#each question.answers as |answer|}}
+    {{#each sortedAnswers as |answer|}}
       {{answer-tile answer=answer createAnswer="createAnswer" deleteAnswer="deleteAnswer" updateAnswer="updateAnswer"}}
     {{/each}}
   </div>
